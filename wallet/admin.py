@@ -1,7 +1,6 @@
 
 from django.contrib import admin
 # Register your models here.
-# from .models import Customer
 from .models import Customer
 from. models import Account
 from.models import Wallet
@@ -12,10 +11,7 @@ from.models import ThirdParty
 from .models import Transaction
 from.models import Card
 from.models import Loan
-# class CustomerAdmin(admin.ModelAdmin):
-#     list_display=('first-name','last-name','age','email')
-#     search_fields=('first-name','last-name')
-admin.site.register(Customer)
+
 class AccountAdmin(admin.ModelAdmin):
     list_display=("account_name","account_number","balance",)
     search_fields=("account_name","account_number","balance",)
@@ -25,13 +21,12 @@ admin.site.register(Account, AccountAdmin)
 class WalletAdmin(admin.ModelAdmin):
     list_display=("status","balance","time","transaction")
     search_fields=("satus","balance","time","transaction")
-     
-admin.site.register(Wallet, WalletAdmin)
+admin.site.register(Wallet,WalletAdmin)
 
-# class AccountAdmin(admin.ModelAdmin):
-    # list_display=("account_name","account_number","balance")
-    # search_fields=("account_name","account_number","balance")
-# admin.site.register(Account)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display=("first_name","last_name","address")
+    search_fields=("first_name","last_name","address")
+admin.site.register(Customer,CustomerAdmin)
 
 class ThirdPartyAdmin(admin.ModelAdmin):
     list_display=("name","currency","amount")
