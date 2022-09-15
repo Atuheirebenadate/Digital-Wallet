@@ -5,7 +5,7 @@ from .models import Account
 from .models import Wallet
 from .models import Transaction
 from .models import Card
-from .models import Notification
+from .models import Notifications
 from .models import Receipt
 from .models import ThirdParty
 
@@ -35,12 +35,13 @@ class ThirdpartyRegistrationForm(forms.ModelForm):
     class Meta:
         model=ThirdParty
         fields="__all__"  
-class NotificationRegistrationForm(forms.ModelForm):
+class NotificactionsRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Notification
+        model=Notifications
         fields="__all__"
 class ReceiptRegistrationForm(forms.ModelForm):
     class Meta:
         model=Receipt
-        fields="__all__"        
+        fields="__all__"  
+
 

@@ -47,7 +47,7 @@ class ThirdParty(models.Model):
         currency=models.IntegerField()
         amount=models.IntegerField()
 
-class Notification(models.Model):
+class Notifications(models.Model):
             title=models.CharField(max_length=15)
             massage=models.CharField(max_length=15)
             date=models.DateTimeField()
