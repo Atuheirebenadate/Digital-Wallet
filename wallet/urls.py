@@ -1,5 +1,4 @@
 
-from unicodedata import name
 from django.urls import path
 from .views import register_Thirdparty, register_account, register_card, register_customer, register_notification, register_receipt, register_transaction, register_wallet
 from wallet import views
@@ -21,4 +20,5 @@ path("cards/",views.list_card,name="card"),
 path("thirdparty/",views.list_thirdparty,name="Thirdparty"),
 path("notifications/",views.list_notification,name="notifications"),
 path("receipt/",views.list_receipt,name="receipt"),
+path("customers/<int:id>/",views.Customer_profile,{{Customer.first_name}} {{customer.last_name}}name="Customer"),
 ]

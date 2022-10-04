@@ -1,0 +1,12 @@
+
+<table>
+    {% for customer in customers %}
+    <tr>
+        <td>{{ customer.first_name }}</td>
+        <td>{{ customer.last_name }}</td>
+        <td>{{ customer.age }}</td>
+        
+    </tr>
+    <td><a href="{% url'customer_profile'  id=customer.id%}"></td>
+    </table>
+
