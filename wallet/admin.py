@@ -6,7 +6,7 @@ from. models import Account
 from.models import Wallet
 from.models import Receipt
 from.models import Reward
-from.models import Notification
+from.models import Notifications
 from.models import ThirdParty
 from .models import Transaction
 from.models import Card
@@ -61,6 +61,6 @@ admin.site.register(Reward,RewardAdmin)
 class NotificationAdmin(admin.ModelAdmin):
     list_display=("title","massage","date")
     search_fields=("title","massage","date")
-admin.site.register(Notification,NotificationAdmin)    
+admin.site.register(Notifications,NotificationAdmin)    
 
 

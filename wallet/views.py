@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from requests import request
 
 from wallet.models import Account, Card, Customer, Notifications, Receipt, ThirdParty, Transaction, Wallet
 from .forms import CustomerRegistretionForm
@@ -122,15 +123,15 @@ def list_transaction(request):
    transaction=Transaction.objects.all()
    return render(request, "wallet/transaction_list.html",{"transaction":transaction}) 
 
-def Customer_profile(request,id):
-    Customer=Customer.objects.get(id=id)
-    return render(request,"wallet/customer_profile.html,{"Customer":Customer}") 
+# def Customer_profile(request,id):
+#     Customer=Customer.objects.get(id=id)
+#     return render(request,"wallet/customer_profile.html,{"Customer":Customer}") 
 
-def edit_customer  (request,id):
-    Customer=Customer.objects.get(id=;id)
-   if request.method=="POST":
-    form=CustomerRegistretionForm(request.POST,)
-    if request
+# def edit_customer  (request,id):
+#     Customer=Customer.objects.get(id=;id)
+#    if request.method=="POST":
+#     form=CustomerRegistretionForm(request.POST,)
+
 
 
 
